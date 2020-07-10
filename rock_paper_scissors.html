@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    console.log("Welcome to a game of Rock, Paper Scissors")
+    function computerPlay(){
+      options = ["Rock", "Paper", "Scissors"];
+      computerTurn = options[Math.floor(Math.random() * 3)]
+      console.log("I choose: " + computerTurn)
+    }
+    computerPlay();
+  </script>
+</body>
+</html>
