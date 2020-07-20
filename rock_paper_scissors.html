@@ -6,13 +6,71 @@
 </head>
 <body>
   <script>
-    console.log("Welcome to a game of Rock, Paper Scissors")
+    console.log("Please select Rock, Paper or Scissors")
+    playerScore = 0;
+    computerScore = 0;
+
+    function game() {
+      for (var i = 0; i < 5;){
+        playerMove = playerInput()
+        computerMove = computerPlay()
+        playRound(playerMove, computerMove)
+        console.log("Computer curent score: " + computerScore);
+        console.log("Player current score: " + playerScore);
+        i++;
+      }
+      console.log("Computer final score: " + computerScore);
+      console.log("Player final score: " + playerScore);
+    }
+    
+    function playRound(playerSelection, computerSelection){
+
+      console.log("You have selected " + playerSelection)
+      console.log("Your opponent has selected " + computerSelection)
+
+      if (playerSelection == "Rock" && computerSelection == "Scissors"){
+        playerScore++;
+        console.log("You Win! " + playerSelection + " beats " + computerSelection)
+      } else if (playerSelection == "Paper" && computerSelection == "Rock"){
+        playerScore++;
+        console.log("You Win! " + playerSelection + " beats " + computerSelection)
+      }else if (playerSelection == "Scissors" && computerSelection == "Paper"){
+        playerScore++;
+        console.log("You Win! " + playerSelection + " beats " + computerSelection)
+      }else if (playerSelection == computerSelection) {
+        console.log("This game was a draw. Try again!")
+      }else {
+        computerScore++;
+        console.log("You lose! " + computerSelection + " beats " + playerSelection)
+      }
+
+    }
+
+    function playerInput() {
+      input = prompt("Please input Rock, Paper or Scissors").toLowerCase();
+      inputSanitised = input.charAt(0).toUpperCase() + input.slice(1);
+      
+      for (var x = 0; x != 1;) {
+
+        if (inputSanitised == "Rock" || inputSanitised == "Scissors" || inputSanitised == "Paper" ) {
+          x = 1
+          return inputSanitised
+
+        } else {
+          alert("You did not enter Rock, Paper or Scissors. Try Again.");
+          input = prompt("Please input Rock, Paper or Scissors").toLowerCase();
+          inputSanitised = input.charAt(0).toUpperCase() + input.slice(1);
+        }
+      }
+    }
+
     function computerPlay(){
       options = ["Rock", "Paper", "Scissors"];
-      computerTurn = options[Math.floor(Math.random() * 3)]
-      console.log("I choose: " + computerTurn)
+      return options[Math.floor(Math.random() * 3)]
     }
-    computerPlay();
+
+    game();
+
   </script>
 </body>
 </html>
