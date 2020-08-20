@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Indie Flower', cursive;
   }
 
 html {
@@ -11,9 +11,8 @@ html {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     margin: 0;
-    font-family: 'Roboto Slab', serif;
 }
 body {
     background-image: url("./images/topography.svg"),
@@ -34,18 +33,64 @@ body {
     height: 100%;
     justify-content: space-evenly;
 }
+
+
 .header_bar {
     min-width: 300px;
     width: 100%;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     text-align: center;
     color: #110d0d;
 }
 
-.selection {
+.scoreWrapper {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+.scoreBar {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    justify-content: space-around;
+    align-items: flex-end;
 
 }
 
+.roundContainer {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.playerContainer {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.computerContainer {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.selection {
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.img{
+    width: 80%;
+    height: 80%;
+}
 .item {
     font-size: 35px;
     padding: 20px;;
@@ -54,14 +99,130 @@ body {
 .btn {
     display: block;
     border: none;
-    font-size: 20px;
     font-weight: bold;
-    background-color: #555555;
-    color: white;
+    background-color: transparent;
     width: 100%;
-    margin: 10px 0 0 0;
-    padding: 10px 20px 10px 20px;
 }
 .btn:hover {
     background-color: #e9c46a;
+}
+
+.suspense {
+    animation: fadeIn ease 4s;
+   -webkit-animation: fadeIn ease 4s;
+   -moz-animation: fadeIn ease 4s;
+   -o-animation: fadeIn ease 4s;
+   -ms-animation: fadeIn ease 4s;
+ }
+
+ .suspense2 {
+    animation: fadeIn ease 3s;
+   -webkit-animation: fadeIn ease 3s;
+   -moz-animation: fadeIn ease 3s;
+   -o-animation: fadeIn ease 3s;
+   -ms-animation: fadeIn ease 3s;
+ }
+
+ .suspenseOut { 
+    animation: fadeOut ease 3s;
+    -webkit-animation: fadeOut ease 3s;
+    -moz-animation: fadeOut ease 3s;
+    -o-animation: fadeOut ease 3s;
+    -ms-animation: fadeOut ease 3s;
+    animation-fill-mode: forwards;
+ }
+
+ @keyframes fadeIn {
+     0% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+   }
+   
+   @-moz-keyframes fadeIn {
+     0% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+   }
+   
+   @-webkit-keyframes fadeIn {
+     0% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+   }
+ 
+ @-o-keyframes fadeIn {
+     0% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+   }
+   
+   @-ms-keyframes fadeIn {
+     0% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+   }
+ }
+
+
+ @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+        opacity:0;
+      }
+  }
+  
+  @-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+  }
+  
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+  }
+
+@-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+      display: none;
+    }
+  }
+  
+  @-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+      display: none;
+  }
 }

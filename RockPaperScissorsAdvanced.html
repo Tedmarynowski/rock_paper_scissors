@@ -2,31 +2,34 @@
 <html>
 <head>
   <link rel="stylesheet" href="RPS.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
   <title>Rock Paper Scissors</title>
   <meta charset="UTF-8"/>
 </head>
 <body>
   <div class="header_bar">
-    <h1>Make a Selection!</h1>
+    <h1>Rock, Paper Scissors</h1>
   </div>
-
+<div class="scoreWrapper">
+<div class="scoreBar">
+  <div class="roundContainer"><h2>Round</h2><h1 class="currentRound">0</h1></div>
+  <div class="playerContainer"><h2>Player Score</h2><h1 class="playerScore">0</h1></div>
+  <div class="computerContainer"><h2>Computer Score</h2><h1 class="computerScore">0</h1></div>
+</div>
+</div>
   <div class="selection">
 
   </div>
 
-    <div class="container">
+    <div id ="buttonBox" class="container">
       <div class="item rock">
-        <img class="img" src ="images/Rock.png">
-        <button type="button" class="rock_btn btn">Rock</button>
+        <button type="button" id="rock_btn" value = "Rock" class="btn"><img class="img" src ="images/Rock.png"></button>
       </div>
       <div class="item paper">
-        <img class="img" src ="images/Paper.png">
-        <button type="button" class="paper_btn btn">Paper</button>
+        <button type="button" id="paper_btn" value = "Paper" class="btn"><img class="img" src ="images/Paper.png"></button>
       </div>
       <div class="item scissors">
-        <img class ="img" src ="images/Scissors.png">
-        <button type="button" class="scissors_btn btn">Scissors</button>
+        <button type="button" id="scissors_btn" value= "Scissors" class="btn"><img class ="img" src ="images/Scissors.png"></button>
       </div>
     </div>
 
